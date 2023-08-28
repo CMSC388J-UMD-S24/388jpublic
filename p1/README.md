@@ -1,8 +1,8 @@
 # P1: Python practice 
 
-**Assigned**: January 28th, 2023
+**Assigned**: Sept 1, 2023
 
-**Due**: February 3rd, 2023 11:59PM
+**Due**: Sept 8, 2023 11:59PM
 
 **Late deadline**: February 6th, 2023 11:59PM
 
@@ -19,18 +19,26 @@ Navigate to the root of a directory you will use for this class. You should use 
 for all projects in this course; you don't need more than one.
 To create and activate one, enter the following commands in your terminal:
 
-> Tip: You can clone the whole repo (`cmsc388j-fall22`) and use that as your root directory for this class. Then, you can just run `git pull` to get new projects.
+> Tip: You can clone the whole repo (`388jpublic`) and use that as your root directory for this class. Then, you can just run `git pull` to get new projects.
 
 For Mac/Linux:
 ```bash
 $ python3 -m venv venv        # creates environment
 $ source ./venv/bin/activate  # enters environment
 ```
+To activate the venv in the future, run 
+```bash
+$ source /#PATH-TO-VENV#/venv/bin/activate  # enters environment
+```
 
 For Windows:
 ```bash
 $ py -m venv venv             # creates environment
 $ ./venv/Scripts/activate     # enters environment
+```
+To activate the venv in the future, run 
+```bash
+$ /#PATH-TO-VENV#/venv/Scripts/activate  # enters environment
 ```
 
 These instructions can also be found in the Week 1 slides.
@@ -157,11 +165,7 @@ You should see your test results in the terminal.
 
 ## Submission & Grading
 
-Compress a `p1` directory into a .zip file containing `practice.py` and `test_practice.py`
-and submit it on ELMS after testing thoroughly; all of your work should be in this module. Do **not** include your virtual environment in your submission.
+Upload `practice.py` to gradescope
+
 
 There are **130** possible points: 13 public tests worth 10 points each.
-
-If your submission doesn't have the `practice.py` and `test_practice.py` files, 
-20 points will be deducted from your score.
-If you include your virtual environment in your submission, 20 points will be deducted from your score.
