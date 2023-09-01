@@ -4,7 +4,7 @@
 
 **Due**: Sept 8, 2023 11:59PM
 
-**Late deadline**: February 6th, 2023 11:59PM
+**Late deadline**: Sept 11th, 2023 11:59PM
 
 ## Description
 
