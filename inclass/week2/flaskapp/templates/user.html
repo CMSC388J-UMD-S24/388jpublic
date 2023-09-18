@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+{% block content %}
+<h2>{{ user }}</h2>
+{% for post in user_posts %}
+    <p>{{ post['text'] }}</p>
+{% endfor %}
+{% endblock %}
