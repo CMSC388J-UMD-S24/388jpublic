@@ -121,6 +121,7 @@ Here's what you need to do for this project, file by file:
      The names for these fields can be determined by looking at the `movie_detail.html` template.
 
 **Hint for MovieReviewForm:** You should use a field that allows multi-line input.
+Refer to https://wtforms.readthedocs.io/en/2.3.x/validators/ for a list of built-in validators.
 
 ## Testing
 
