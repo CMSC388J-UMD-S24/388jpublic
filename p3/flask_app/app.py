@@ -30,7 +30,7 @@ app.config.update(
 
 mongo = PyMongo(app)
 
-movie_client = MovieClient(os.environ.get('OMDB_API_KEY'))
+movie_client = MovieClient(OMDB_API_KEY)
 
 # --- Do not modify this function ---
 @app.route('/', methods=['GET', 'POST'])
