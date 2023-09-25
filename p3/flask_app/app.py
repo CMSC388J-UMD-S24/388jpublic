@@ -10,6 +10,7 @@ from datetime import datetime
 from flask_app.forms import SearchForm, MovieReviewForm
 from flask_app.model import MovieClient
 
+# don't change the name
 app = Flask(__name__)
 
 # TODO: you should fill out these with the appropriate values
@@ -28,8 +29,10 @@ app.config.update(
     SESSION_COOKIE_SAMESITE='Lax',
 )
 
+# don't change the name
 mongo = PyMongo(app)
 
+# don't change the name 
 movie_client = MovieClient(OMDB_API_KEY)
 
 # --- Do not modify this function ---
