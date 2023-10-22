@@ -423,3 +423,5 @@ All tests are worth an equal amount of points.
 
 In total, there are 300 points + 120 points extra credit.
 
+### The autograder will be out of 420 points, but the canvas assignment will only be out of 300. You only need 300 points to recieve an A on this assignment.
+
