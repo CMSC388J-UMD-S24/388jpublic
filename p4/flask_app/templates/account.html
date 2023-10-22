@@ -1,0 +1,63 @@
+{% extends "header.html" %}
+{% block content %}
+<div class="row">
+    {% if image %}
+    <div class="col">
+        {# Profile picture #}
+        <img class="propic" src="data:image/png;base64,{{image}}" alt="image">
+    </div>
+    {% endif %}
+    <div class="col">
+        {# Greeting (must include the current user's username #}
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h3>
+            Update Username
+        </h3>
+        <form method="POST" action="">
+            {{ update_username_form.csrf_token }}
+            <div class="form-group">
+                {{ update_username_form.username.label }}
+                {{ update_username_form.username(class="form-control") }}
+                {% if update_username_form.username.errors %}
+                <div class="alert alert-warning" role="alert">
+                    {% for error in update_username_form.username.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {{ update_username_form.submit_username() }}
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        <h3>
+            Update Profile Picture
+        </h3>
+        <form method="POST" action="" enctype="multipart/form-data">
+            {{ update_profile_picture_form.csrf_token }}
+            <div class="form-group">
+                {{ update_profile_picture_form.picture.label }}
+                {{ update_profile_picture_form.picture(class="form-control") }}
+                {% if update_profile_picture_form.picture.errors %}
+                <div class="alert alert-warning" role="alert">
+                    {% for error in update_profile_picture_form.picture.errors %}
+                    <span>{{ error }}</span>
+                    {% endfor %}
+                </div>
+                {% endif %}
+            </div>
+            {{ update_profile_picture_form.submit_picture() }}
+        </form>
+    </div>
+</div>
+<div class="row">
+    <div class="col">
+        {# Link to see all of the current user's reviews. #}
+    </div>
+</div>
+{% endblock %}
