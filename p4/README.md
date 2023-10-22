@@ -370,10 +370,6 @@ score on this project.
 
 If you don't use MongoDB, you will get a 0 on this project.
 
-Your project will be graded on (1) correctness and (2) robustness.
-Here are the **correctness** requirements:
-
-**Correctness**:
 
 These requirements include requirements from project 3 as well as functionality
 we implemented. Since this project is an extension of project 3 where we're
