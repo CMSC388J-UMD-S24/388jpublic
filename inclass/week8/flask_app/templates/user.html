@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{{ url_for('main.index_route') }}">Back to Home</a>
+<h2>{{ username }}</h2>
+{% if profile_pic_base64 %}
+    <img class="w-25" src="data:image/png;base64,{{profile_pic_base64}}" alt="image">
+{% endif %}
+{% for post in user_posts %}
+    <p>{{ post['text'] }}</p>
+{% endfor %}
+{% endblock %}
