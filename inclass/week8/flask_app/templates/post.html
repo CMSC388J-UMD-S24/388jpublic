@@ -1,6 +1,0 @@
-{% extends "base.html" %}
-{% block content %}
-<a href="{{ url_for('main.index_route') }}">Back to Home</a>
-<h2><a href="{{ url_for('users.user_route', username=post['user']) }}">{{ post['user'] }}</a></h2>
-<p>{{ post['text'] }}</p>
-{% endblock %}
