@@ -8,7 +8,7 @@ def hello_world():
     >>> hello_world()
     'Hello, World!'
     """
-    raise NotImplementedError('Please implement this function for full credit')
+    return "Hello, World!"
 
 
 def sum_unique(l):
@@ -27,7 +27,17 @@ def sum_unique(l):
     >>> sum_unique([2, 2, 2, 2, 1])
     3
     """
-    raise NotImplementedError('Please implement this function for full credit')
+    if len(l) == 0 or l is None:
+        return 0
+    
+    sum_of_l = 0
+    unique = []
+    for num in l:
+        if num not in unique:
+            unique.append(num)
+            sum_of_l += num
+
+    return sum_of_l
 
 
 def palindrome(x):
@@ -47,7 +57,12 @@ def palindrome(x):
     >>> palindrome('python')
     False
     """
-    raise NotImplementedError('Please implement this function for full credit')
+    string = str(x)
+    for i in range(int(len(string) / 2)):
+        if string[i] != string[len(string) - i - 1]:
+            return False
+    return True
+        
         
         
 
@@ -68,7 +83,14 @@ def sum_multiples(num):
     >>> sum_multiples(16) # Multiples: [3, 5, 6, 9, 10, 12, 15]
     60
     """
-    raise NotImplementedError('Please implement this function for full credit')
+    sum_nums = 0
+    print(num)
+    for i in range(0, num):
+        print(i)
+        if i % 3 == 0 or i % 5 == 0:
+            sum_nums = sum_nums + i
+    return sum_nums
+
 
 
 def num_func_mapper(nums, funs):
@@ -86,7 +108,13 @@ def num_func_mapper(nums, funs):
     >>> num_func_mapper(num_list, f_list)
     [11, 15]
     """
-    raise NotImplementedError('Please implement this function for full credit') 
+    new_list = [] 
+    for function in funs:
+        new_list.append(function(nums))
+        # Function that maps each number to another value 
+    return new_list
+
+
 
 def height_sort(names, heights):
     """
@@ -104,6 +132,21 @@ def height_sort(names, heights):
     Output: ["Mary","Emma","John"]
     Explanation: Mary is the tallest, followed by Emma and John.
     """
+    map = {}
+    new_heights = []
+    for i in range(len(names)):
+        map[heights[i]] = names[i]
+    
+
+    sorted_heights = sorted(heights)
+    for height in sorted_heights:
+        new_heights.append(map[height])
+
+    new_heights.reverse()
+    # Return the new height array
+    return new_heights
+        
+
     
     raise NotImplementedError('Please implement this function for full credit')
  
@@ -116,5 +159,6 @@ def custom_sort(lst):
     [(1, 3, 5, 2, 4)]
     (Hint: use a lambda function) 
     """
-    
-    raise NotImplementedError('Please implement this function for full credit')
+    new_list = sorted(lst, key=lambda x: (x % 2 == 0, x))
+
+    return new_list
