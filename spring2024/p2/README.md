@@ -151,16 +151,17 @@ Your project will be graded according to (1) correctness, and (2) robustness. He
 
 **Correctness**:
 
-| Requirement                                                                                                           | Points            |
-| --------------------------------------------------------------------------------------------------------------------- | ----------------- |
-| All Pokemon visible on front page as clickable links, with no duplicate info.                                         | 15                |
-| All Pokemon info returned from the `PokeClient` class is visible on the respective info page, with no duplicate info. | 20                |
-| All Pokemon names visible and presented as links to Pokemon info pages on the ability pages, with no duplicate info.  | 15                |
-| Link on Pokemon and ability info pages to the front page clearly visible and works.                                   | 10                |
-| Two more templates created for the Pokemon and ability info pages extending `base.html`                               | 10, (5 for each)  |
-| Correct routes in app                                                                                                 | 10                |
-| `url_for` used to create links and `render_template` used                                                             | 10                |
-| `Jinja2` control flow statements used to dynamically create HTML in template files.                                   | 10                |
+| Requirement                                                                                                           | Points           |
+| --------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| All Pokemon visible on front page as clickable links, with no duplicate info.                                         | 15               |
+| All Pokemon info returned from the `PokeClient` class is visible on the respective info page, with no duplicate info. | 20               |
+| All Pokemon names visible and presented as links to Pokemon info pages on the ability pages, with no duplicate info.  | 15               |
+| Link on Pokemon and ability info pages to the front page clearly visible and works.                                   | 10               |
+| Two more templates created for the Pokemon and ability info pages extending `base.html`                               | 10, (5 for each) |
+| Correct routes in app                                                                                                 | 10               |
+| `url_for` used to create links and `render_template` used                                                             | 10               |
+| `Jinja2` control flow statements used to dynamically create HTML in template files.                                   | 5                |
+| `img` image tag is used to dynamically create images in the HTML in template files.                                   | 5                |
 
 **Robustness**:
 
