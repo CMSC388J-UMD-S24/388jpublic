@@ -21,7 +21,6 @@ class PokeClient(object):
         """
         Returns a list of pokemon ids
         """
-        lst = self.get_pokemon_list()
         ids = []
         resp = self.sess.get(f'{self.base_url}/pokemon?limit=1200')
         for poke_dict in resp.json()['results']:
@@ -59,7 +58,6 @@ class PokeClient(object):
         resp = resp.json()
         
         result = {}
-
         result['id'] = resp['id']
         result['name'] = resp['name']
         result['height'] = resp['height']
@@ -96,13 +94,12 @@ class PokeClient(object):
             raise ValueError(f'Request failed with status code: {code} and message: '
                              f'{resp.text}')
 
-        pokemon = []
+        pokemon = {}
         for poke_dict in resp.json()['pokemon']:
             tmp = poke_dict['pokemon']['url'][34:]
             pokemon[poke_dict['pokemon']['name']] = tmp[:-1]
         
-        # sometimes the api gives us duplicate pokemon
-        return list(set(pokemon))
+        return pokemon
 
 ## -- Example usage -- ###
 if __name__=='__main__':

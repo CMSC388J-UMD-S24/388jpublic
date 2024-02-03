@@ -67,7 +67,7 @@ Implement the following functions with the corresponding routes:
 
     You can get a list of corresponding Pokemon ids with the `get_pokemon_ids()` method of the `PokeClient` class.
 
-    To display the pokemon image, use an img tag with src attribute set to "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon id }}.png"
+    To display the pokemon image, use an `<img` tag with `src` attribute set to `"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon id }}.png"`
 
 2. `pokemon_info(pokemon_name)` - Should show all info about the specified Pokemon. 
 
@@ -82,9 +82,9 @@ Implement the following functions with the corresponding routes:
     There should be a clearly visible link to go back to the front-page of the website, located
     at `/`.
 
-    To display the pokemon image, use an img tag with src attribute set to "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon id }}.png"
+    To display the pokemon image, use an `<img` tag with `src` attribute set to `"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon id }}.png"`
     (The `get_pokemon_info()` method has id of the pokemon in the dictionary that it returns.)
-    To make the image a certain size, set the height and width attributes of the img tag.
+    To make the image a certain size, set the `height` and `width` attributes of the img tag.
 
 3. `pokemon_with_ability(ability_name)` - Should show a list of Pokemon who have the specified 
     ability.
@@ -93,7 +93,7 @@ Implement the following functions with the corresponding routes:
     identifying Pokemon that have the ability specified by `ability_name`.
     
     The `get_pokemon_with_ability()` method of
-    the `PokeClient` class returns a list of Pokemon names with the ability. The list of
+    the `PokeClient` class returns a  dictionary of `'name': 'id'` pairs of Pokemon with the ability. The list of
     Pokemon names should be presented as a series of clickable links that will take the 
     website user to the info page for that Pokemon, located at `/pokemon/<pokemon_name>`.
 
