@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% block content %}
+    <br/>
+    <img src="https://images-ext-2.discordapp.net/external/p0mKI1Wb1Xj-0caAk8q42C59tiXdUr6i5hJszuatFNY/https/c.tenor.com/6tc0o7KM0HwAAAAM/omg-corgi.gif" height="400px" width="400px"/>
+
+    {% for user in users %}
+    <ul>
+        <li>
+            <h2>
+                {{ user['name'] }}
+            </h2>
+
+            <p>
+                {{ user['text'] }}
+            </p>
+        </li>
+    </ul>
+    {% endfor %}
+
+{% endblock %}
+
+<!-- 2nd block of content -->
+{% block content2 %}
+    <h1>Home Content2</h1>
+{% endblock %}
+

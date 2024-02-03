@@ -1,0 +1,30 @@
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        {% if title %}
+            <title>{{ title }}</title>
+        {% else %}
+            <title>Default</title>
+        {% endif %}
+    </head>
+    <body>
+        
+        <!-- navigates to /, which is the @app.route for def default in app.py -->
+        <a href="{{ url_for('default') }}">Go To base.html</a>
+
+        <!-- navigates to /home, which is the @app.route for def index_route in app.py -->
+        <a href="{{ url_for('index_route') }}">Go To home.html</a>
+
+        {% block content %}
+            <h1>Default Content</h1>
+        {% endblock %}
+
+        in between content
+
+        {% block content2 %}
+            <h1>Default Content2</h1>
+        {% endblock %}
+    </body>
+</html>
