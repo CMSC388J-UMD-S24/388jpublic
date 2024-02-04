@@ -1,0 +1,21 @@
+html {
+  color-scheme: light dark;
+  font-family: sans-serif;
+}
+
+body {
+  padding: 2rem;
+  margin: auto;
+}
+
+@media (min-width: 768px) {
+  body {
+    max-width: fit-content;
+    min-width: 369px;
+  }
+}
+
+ol {
+  padding-left: 1rem;
+}
+
