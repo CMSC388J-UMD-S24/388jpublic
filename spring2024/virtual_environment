@@ -1,0 +1,5 @@
+"source ./venv/bin/activate"
+
+
+for testing
+pip3 install -r requirements.txt

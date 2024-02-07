@@ -11,6 +11,10 @@ def index():
 
     Check the README for more detail.
     """
+    list_of_pokemons = PokeClient.get_pokemon_list
+    list_of_ids = PokeClient.get_pokemon_id
+    return render_template('index.html', list_of_pokemons=list_of_pokemons, list_of_ids=list_of_ids)
+
     return render_template('index.html')
 
 @app.route()
