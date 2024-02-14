@@ -11,26 +11,22 @@ def index():
 
     Check the README for more detail.
     """
-    list_of_pokemons = PokeClient.get_pokemon_list
-    list_of_ids = PokeClient.get_pokemon_id
-    return render_template('index.html', list_of_pokemons=list_of_pokemons, list_of_ids=list_of_ids)
+    pokemon_names = poke_client.get_pokemon_list()
+    pokemon_ids = poke_client.get_pokemon_ids()
+    return render_template('index.html', pokemon_names=pokemon_names, pokemon_ids=pokemon_ids, zip=zip)
 
-    return render_template('index.html')
-
-@app.route()
+@app.route('/pokemon/<pokemon_name>')
 def pokemon_info(pokemon_name):
     """
     Must show all the info for a pokemon identified by name
 
     Check the README for more detail
     """
-    pass
+    pokemon_info = poke_client.get_pokemon_info(pokemon_name.lower())
+    return render_template('pokemon_info.html', pokemon_info=pokemon_info)
 
-@app.route()
+@app.route('/ability/<ability_name>')
 def pokemon_with_ability(ability_name):
-    """
-    Must show a list of pokemon 
-
-    Check the README for more detail
-    """
-    pass
+    list_of_pokemons_with_ability = poke_client.get_pokemon_with_ability(ability_name.lower())
+    # We need the list of pokemon ids only for the list of pokemons with the ability
+    return render_template('pokemon_with_ability.html', ability_name=ability_name, list_of_pokemons_with_ability=list_of_pokemons_with_ability)

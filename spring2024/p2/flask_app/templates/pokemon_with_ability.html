@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+{% block content %}
+    <a href="/">Home</a>
+    <h1>Pokemon with ability {{ ability_name }}</h1>
+    <ol>
+        {% for pokemon_name in list_of_pokemons_with_ability %}
+            <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ list_of_pokemons_with_ability[pokemon_name] }}.png" alt="POKEMON" >
+            <li><a href="{{url_for('pokemon_info', pokemon_name=pokemon_name)}}">{{ pokemon_name }}</a></li>
+            <br>
+        {% endfor %}
+    <ol>
+
+
+{% endblock %}

@@ -1,4 +1,6 @@
-"source ./venv/bin/activate"
+to activate --> "source ./venv/bin/activate"
+
+to set evironment variable --> 
 
 
 for testing

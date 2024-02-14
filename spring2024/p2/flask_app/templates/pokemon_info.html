@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+{% block content %}
+    {#We have a link that returns to HOME#}
+    <a href="/">Home</a>
+    <h1>Info for {{ pokemon_info.name }}</h1>
+    <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon_info.id }}.png" alt="POKEMON" width="70%">
+    <br>
+    <b>Name    </b>
+    {{ pokemon_info.name }}
+    <br>
+    <b>Height    </b>
+    {{ pokemon_info.height }}
+    <br>
+    <b>Weight    </b>
+    {{ pokemon_info.weight }}
+    <br>
+    <b>Base XP    </b>
+    {{ pokemon_info.base_exp }}
+    <br>
+    <b>Moves    </b>
+    <ol>
+        {% for move in pokemon_info.moves %}
+            <li>{{ move }}</li>
+        {% endfor %}
+    </ol>
+    <b>Abilities</b>
+    <ol>
+        {% for ability in pokemon_info.abilities %}
+            <li><a href="{{ url_for('pokemon_with_ability', ability_name=ability)}}">{{ ability }}</a></li>
+        {% endfor %}
+    </ol>
+{% endblock %}

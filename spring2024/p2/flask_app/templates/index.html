@@ -1,4 +1,14 @@
 {% extends "base.html" %}
+
 {% block content %}
-<b>Poke-Info website!</b>
+    <b>Poke-Info website!</b>
+    <br>
+    {#We also need to go through list of pokemons and display them#}
+    <ol>
+    {% for pokemon_name, pokemon_id in zip(pokemon_names, pokemon_ids) %}
+        <img src="https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon_id }}.png" alt="POKEMON" height="65px" width="65px">
+        <li><a href="/pokemon/{{ pokemon_name }}">{{ pokemon_name }}</a></li><br>
+    {% endfor %}
+    <ol>
+
 {% endblock %}
