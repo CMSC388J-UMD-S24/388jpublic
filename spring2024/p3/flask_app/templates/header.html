@@ -1,0 +1,9 @@
+{% extends "base.html" %} {% block header %}
+<nav
+  class="bg-neutral-700 w-fit rounded-full py-2 px-4 m-5 hover:bg-neutral-600 duration-300 active:duration-75 active:bg-neutral-500"
+>
+  <a class="font-bold block text-neutral-200" href="{{ url_for('index') }}">
+    movie-rater
+  </a>
+</nav>
+{% block content %}{% endblock %} {% endblock %}
