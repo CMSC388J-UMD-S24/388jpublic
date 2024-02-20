@@ -42,15 +42,6 @@ The setup involves getting an API key and installing the necessary packages.
    ![alt text](images/request_key.png "Request an API Key")
 3. Using the API key you received in your email, fill in the `OMDB_API_KEY` variable at the top `app.py`.
 
-To create your virtual environment, be in the `p3/` directory and use
-the correct command to create a virtual environment folder named `venv`. To activate it,
-use the appropriate command for your system (if you're having trouble
-figuring out how to activate your environment, contact us and include a 
-screenshot of the `venv` directory structure).
-Then, to install the necessary packages, run `pip3 install -r requirements.txt`.
-
-This week we'll be using the `requests`, `Flask`, `Flask-WTF`, and `Flask-PyMongo` libraries.
-
 ## Project
 
 This is the `p3/` directory structure
@@ -146,6 +137,7 @@ The navbar header should take you back to the main page, where you can search fo
 Assure that you've tried out all the different things that could go wrong and that they
 are behaving appropriately (and the things that are supposed to work, still do).
 
+*Before zipping, delete the `venv/` directory from `p3/` if you created one.\
 **The directory, along with its contents, should be zipped, not the contents of the directory.**
 In other words, when we unzip your file, we should see the `p3/` directory. If you
 have any questions on how to submit, please contact us.
