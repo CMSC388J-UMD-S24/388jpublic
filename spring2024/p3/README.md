@@ -165,7 +165,7 @@ Here are the **correctness** requirements:
 **Correctness**:
 
 | Requirement                                        | Points |
-|----------------------------------------------------|--------|
+| -------------------------------------------------- | ------ |
 | Secret Key Set                                     | 5      |
 | Search form rendered with input validators         | 10     |
 | Search form input validator errors shown on page   | 5      |
@@ -179,9 +179,3 @@ Here are the **correctness** requirements:
 | Reviews are read from MongoDB                      | 15     |
 
 There's a total of 110 points.
-
-**Robustness:**
-
-Refer to the syllabus for the robustness requirement for all projects.
-The syllabus has been updated recently with this information, since
-it will be common to all projects.
