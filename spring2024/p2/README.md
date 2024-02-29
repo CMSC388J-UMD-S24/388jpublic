@@ -82,7 +82,7 @@ Implement the following functions with the corresponding routes:
     There should be a clearly visible link to go back to the front-page of the website, located
     at `/`.
 
-    To display the pokemon image, use an `<img` tag with `src` attribute set to `"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/{{ pokemon id }}.png"`
+    To display the pokemon image, use an `<img` tag with `src` attribute set to `"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/{{ pokemon id }}.png"`
     (The `get_pokemon_info()` method has id of the pokemon in the dictionary that it returns.)
     To make the image a certain size, set the `height` and `width` attributes of the img tag.
 

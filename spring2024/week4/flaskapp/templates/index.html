@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{{ url_for('createpost_route') }}">Create Post</a>
+{% for post in posts %}
+    <h2><a href="{{ url_for('user_route', user=post['user']) }}">{{ post['user'] }}</a></h2>
+    <p><a href="{{ url_for('post_route', id=post['_id']) }}">{{ post['text'] }}</a></p>
+{% endfor %}
+{% endblock %}
