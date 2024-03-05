@@ -1,0 +1,66 @@
+{% extends "header.html" %} {% block content %}
+
+{% if error_msg %}
+  <b class="text-red-400">
+    {{ error_msg }}
+  </b>
+{% endif %}
+
+{% if movie %}
+
+{# Display card for the movie details #}
+<div class="movie-container">
+  <ul class="movie-info">
+    <div class="movie-title"> {{ movie.title }}
+      <p class="movie-date"> &middot; {{ movie.year }}</p>
+    </div>
+    <img class="movie-img" alt="alt text" src="{{ movie.poster_url }}" />
+    <li class="opacity-40 md:px-4"><b>Directed by:</b> {{ movie.director }}</li>
+    <li class="opacity-40 md:px-4"><b>Actors:</b> {{ movie.actors }}</li>
+    <li class="opacity-40 md:px-4"><b>Genres:</b> {{ movie.genres }}</li>
+    <li class="opacity-40 md:px-4"><b>Awards:</b> {{ movie.awards }}</li>
+  </ul>
+
+  {# Reviews #}
+  <div class="reviews">
+    <h1 class="reviews-title"> Reviews
+      <small class="reviews-count"> {{ reviews | length }} reviews </small>
+    </h1>
+    <ul class="review-container">
+      {% for review in reviews %}
+        <li class="review flex gap-2">
+          <img class="h-20 w-20 rounded-lg" src="data:image/png;base64,{{review.image}}" alt="" />
+          <div class="w-full">
+            <span class="review-date">{{ review.date }}</span>
+            <a class="review-commenter" href="{{ url_for('movies.user_detail', username=review.commenter.username) }}">
+              @{{ review.commenter.username }}
+            </a>
+            <p class="review-content">{{ review.content }}</p>
+          </div>
+        </li>
+      {% endfor %}
+    </ul>
+
+    {% if current_user.is_authenticated %}
+      {# Movie review submission form #}
+      <div class="container mx-auto">
+        <form method="POST" action="" class="review-form">
+          {{ form.csrf_token }}
+          <div class="form-group review-input">
+            {{ form.text.label }} {{ form.text(class="form-content") }}
+            {% if form.text.errors %}
+              <div class="error" role="alert">
+                {% for error in form.text.errors %}
+                <span>{{ error }}</span>
+                {% endfor %}
+              </div>
+            {% endif %}
+          </div>
+          {{ form.submit(class="review-button") }}
+        </form>
+      </div>
+    {% endif %}
+  </div>
+  <div class="w-0 lg:w-96"></div>
+</div>
+{% endif %} {% endblock content %}

@@ -1,0 +1,140 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  /* color-scheme: light dark; */
+  @apply bg-neutral-900 text-neutral-100 overflow-x-hidden w-screen;
+}
+
+.navlink {
+  @apply bg-neutral-700 w-fit rounded-full py-2 px-4 hover:bg-neutral-600 duration-300 active:duration-75 active:bg-neutral-500 font-bold block text-neutral-200;
+}
+
+.main-container {
+  @apply container mx-auto relative flex flex-col;
+}
+
+.main-title {
+  @apply text-4xl mx-auto mt-6 text-center mb-12 text-transparent bg-clip-text bg-gradient-to-r from-white to-neutral-600 w-[30rem] font-bold;
+}
+
+.searchbar {
+  @apply flex -mb-2 relative text-white justify-center w-fit mx-auto;
+}
+
+.error {
+  @apply text-red-500 bg-red-900 border border-red-500 p-4 rounded-lg;
+}
+
+.form-control {
+  @apply bg-neutral-900/50 rounded-full border-2 border-neutral-600/50 py-3 px-5 w-96 backdrop-blur-lg duration-150 focus:shadow-[0_0.5rem_3rem_-1rem_#fff2] focus:border-neutral-400/50 focus:outline-none;
+}
+
+.form-title {
+  @apply bg-neutral-900/50 rounded-lg border-2 border-neutral-600/50 py-3 px-4 w-full backdrop-blur-lg duration-150 focus:border-neutral-400/50 focus:outline-none;
+}
+
+.form-content {
+  @apply bg-neutral-900/50 rounded-lg border-2 border-neutral-600/50 py-3 px-4 w-full backdrop-blur-lg duration-150 focus:border-neutral-400/50 focus:outline-none;
+}
+
+.form-button {
+  @apply cursor-pointer !bg-neutral-600/50 rounded-full px-4 py-2 font-bold absolute right-1.5 top-1.5 hover:!bg-neutral-500 hover:scale-105 duration-300 active:duration-75 active:scale-90 active:!bg-neutral-400;
+}
+
+.review-button {
+  @apply cursor-pointer !bg-neutral-600/50 rounded-lg px-4 py-2 font-bold hover:!bg-neutral-500 duration-300 active:duration-75 active:translate-y-1 active:!bg-neutral-400;
+}
+
+.movie-card {
+  @apply flex justify-start flex-col cursor-pointer hover:bg-neutral-700 rounded-2xl duration-300 w-96;
+}
+
+.movie-card-img {
+  @apply rounded-lg group-hover:scale-90 group-hover:-translate-y-1.5 duration-150 aspect-[2/3];
+}
+
+.movie-card-content {
+  @apply mt-2 flex flex-col p-4 font-bold group-hover:scale-90 group-hover:-translate-y-4 duration-150;
+}
+
+.movie-container {
+  @apply px-6 text-neutral-100 flex flex-col md:flex-row md:justify-between gap-4;
+}
+
+.movie-info {
+  @apply flex flex-col gap-3 md:w-96;
+}
+
+.movie-title {
+  @apply md:absolute md:top-6 md:left-40 text-2xl flex flex-col md:flex-row font-bold items-center;
+}
+
+.movie-date {
+  @apply md:ml-2 font-normal text-lg block text-neutral-400;
+}
+
+.movie-img {
+  @apply rounded-xl w-full md:w-96 mb-2;
+}
+
+.reviews {
+  @apply w-full md:w-2/3 lg:w-1/3;
+}
+
+.reviews-title {
+  @apply text-xl font-bold mb-4;
+}
+
+.reviews-count {
+  @apply text-sm font-normal text-neutral-400;
+}
+
+.review {
+  @apply bg-neutral-800 rounded-2xl p-2;
+}
+
+.review-container {
+  @apply flex flex-col gap-2;
+}
+
+.review-commenter {
+  @apply bg-neutral-700 hover:bg-blue-700/50 hover:text-blue-400 duration-300 rounded-full pl-1.5 pt-0.5 pb-1 pr-2.5 w-fit font-bold truncate max-w-[30ch];
+}
+
+.review-content {
+  @apply w-full break-words font-light text-sm text-neutral-300 p-1;
+}
+
+.review-date {
+  @apply float-right text-neutral-500 text-xs;
+}
+
+.review-form {
+  @apply flex flex-col gap-4 mt-4 p-4 pt-2 rounded-xl bg-neutral-800;
+}
+
+.review-input {
+  @apply flex flex-col text-neutral-300 gap-2;
+}
+
+.results-container {
+  @apply container flex 2xl:-mt-[3.5rem] mx-auto relative text-lg flex-wrap text-neutral-100 gap-4 justify-center;
+}
+
+.decoration-container {
+  @apply absolute -z-10 top-0 left-0 right-0 flex h-0 justify-center;
+}
+
+.decoration-main-container {
+  @apply absolute -z-10 bottom-0 left-0 right-0 flex h-0 justify-center;
+}
+
+.decoration {
+  @apply absolute -bottom-48 h-[100vh] w-[3000px] rounded-[100%] bg-neutral-800 md:w-[200vw];
+}
+
+.decoration-main {
+  @apply absolute bottom-4 h-[100vh] w-[3000px] rounded-[100%] bg-neutral-800 md:w-[200vw];
+}
