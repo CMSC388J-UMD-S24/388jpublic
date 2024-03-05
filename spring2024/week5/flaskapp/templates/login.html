@@ -1,0 +1,28 @@
+{% extends "base.html" %}
+{% block content %}
+<a href="{{ url_for('index_route') }}">Back to Home</a>
+<h1>Login</h1>
+
+<form action="" method="post">
+    {{ form.csrf_token }}
+    {{ form.username.label }}: {{ form.username(size=40) }} <br>
+    {% if form.username.errors %}
+        Errors:
+        <div>
+            {% for error in form.username.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {{ form.password.label }} {{ form.password(size=40) }} <br>
+    {% if form.password.errors %}
+        Errors:
+        <div>
+            {% for error in form.password.errors %}
+                <div>{{ error }}</div>
+            {% endfor %}
+        </div>
+    {% endif %}
+    {{ form.submit() }}
+</form>
+{% endblock %}
