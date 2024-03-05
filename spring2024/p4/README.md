@@ -1,10 +1,10 @@
 # P4: Movie Ratings Database Pro Max Plus S
 
-**Assigned**: March 1
+**Assigned**: March 5
 
-**Due**: March 16, 11:59 PM
+**Due**: March 15, 11:59 PM
 
-**Late Deadline**: March 19, 11:59 PM
+**Late Deadline**: March 18, 11:59 PM
 
 ## Description
 
