@@ -246,7 +246,7 @@ out all of those requirements, and that you display errors relevant to each
 page properly, and that the `current_user` object is used where needed.
 
 
-## Submissions
+## Submission
 
 Assure that you've tried out all the different things that could go wrong and that they
 are behaving appropriately (and the things that are supposed to work, still do), and
