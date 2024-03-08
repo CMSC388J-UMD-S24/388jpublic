@@ -16,30 +16,30 @@ div {
   /* rem - depends on font-size of the client (usually 16px) */
   /* % - depends on container size */
   /* em, rem, px, %, vw, vh */ 
-  width: 
-  height: 
-  color: 
-  background-color: 
+  width: ;
+  height: ;
+  color: ;
+  background-color: ;
 
   /* font-size: 40px; */
   /* font-weight: 700; */
   /* font-family: monospace; */
 
-  margin: 
-  padding: 
+  margin: ;
+  padding: ;
   
-  border-color: 
-  border-style: 
-  border-width: 
-  border-radius: 
+  border-color: ;
+  border-style: ;
+  border-width: ;
+  border-radius: ;
   /* border: 0.25rem solid #444; */
 
   /* background-image: url('https://media1.tenor.com/m/HDmATFxHCmMAAAAC/cat-funny.gif');
   background-size: contain; */
   /* background-image: linear-gradient(to top right, #88f, #f8f 25%, transparent 25%, transparent 75%, #f8f 75%, #ff8); */
 
-  position: 
-  overflow: 
+  position: ;
+  overflow: ;
 }
 
 .container {
