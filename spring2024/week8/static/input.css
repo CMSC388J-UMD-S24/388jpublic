@@ -1,0 +1,75 @@
+@tailwind base;
+@tailwind utilities;
+@tailwind components;
+
+html, body {
+  color-scheme: light dark;
+  font-family: sans-serif;
+  place-items: center;
+  display: grid;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+}
+
+:root {
+  color-scheme: light dark;
+  --red: light-dark(#7f7, #f44);
+  --green: #7f7;
+  --blue: #77f;
+}
+
+
+/* mobile */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr;
+  }
+  button {
+    background: red;
+  }
+}
+/* prefers dark mode */
+@media (prefers-color-scheme: dark) {
+  button {
+    background: green;
+  }
+}
+
+/* prefers reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  /* ... */
+}
+
+/* portrait / landscape */
+@media (orientation: portrait) {
+  /* ... */
+}
+
+/* touch-capable */
+@media (pointer: coarse) {
+  /* ... */
+}
+
+.animate-scale {
+  opacity: 0;
+  --duration: 0.5s;
+  animation: scale var(--duration) var(--delay) ease-in-out forwards;
+}
+
+@keyframes scale {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  /* 0.9s */
+  /* 90% {
+    transform: scale(1.5);
+  } */
+  /* 1s */
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
