@@ -19,11 +19,13 @@ Read the project specifications and fill out all the questions **in gradescope!*
 
 ## Logistics
 
-There are 3 things you will submit for the final project (only 1 group member has to submit):
+There are 4 things you will submit for the final project (only 1 group member has to submit, but select all members names in gradescope):
 
 1. Proposal
 2. Project code
 3. Writeup (submit when you submit your project’s code)
+4. Pretty Project (Extra credit due at the end of the semester)
+
 
 Both the Proposal and Writeup use this document as a template (your writeup will likely be the same or similar to your proposal depending on how much has changed since your proposal document).
 
