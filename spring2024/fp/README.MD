@@ -1,5 +1,5 @@
 
-## CMSC 388J Final Project Proposal/Writeup Template
+## CMSC 388J Final Project Proposal
 
 **Group Members (1-4 members):**
 
@@ -10,14 +10,16 @@ Select your group members in gradescope!!!
 
 **Directions:**
 
-Read the project specifications and fill out all the questions in gradescope!
+Read the project specifications and fill out all the questions **in gradescope!**
+
+> [!IMPORTANT]
+> All the answers to the questions should be submitted to the gradescope submission with all
+> of your group members selected
 
 
 ## Logistics
 
 There are 3 things you will submit for the final project (only 1 group member has to submit):
-
-
 
 1. Proposal
 2. Project code
@@ -29,22 +31,18 @@ Both the Proposal and Writeup use this document as a template (your writeup will
 
 Proposal: April 12, 2024
 
-
-
 * We **highly recommend** you complete this as early as possible so you have more time to work on the project. We will review your proposal within 1-2 days of submission.
 
 ## Overview
 
 The final project for this class is to create a Flask app in a group of 1-4. You have a lot of freedom for this project as long as you meet the requirements. 
 
-**You’re welcome to use Project 4 (or any other project from this course) as a base **(though you’re not required to–in fact, we encourage you to try creating something from scratch)**. **If you choose to use a course project, you need to make a “substantial” change. Examples of “substantial” changes include:
-
-
+**You’re welcome to use Project 4 (or any other project from this course) as a base (though you’re not required to–in fact, we encourage you to try creating something from scratch)**. *If you choose to use a course project, you need to make a “substantial” change. Examples of “substantial” changes include:*
 
 * Using a different API (instead of the OMDB API) + minor feature to demonstrate knowledge of Flask
 * It’s no longer a “review site” but something else
 * It’s still a “review site” but you add a major feature
-    * Examples: ability to reply to reviews
+* Examples: ability to reply to reviews
 
 Use your best judgment here but reach out to course instructors if you’re unsure. 
 
@@ -92,7 +90,7 @@ List and describe at least 4 forms:
 
 
 * Must have at least 2 blueprints 
-* Each blueprint should have at least 3 visible and accessible routes
+* Each blueprint should have at least 2 visible and accessible routes
 
 ```
 List and describe your routes/blueprints (don't need to list all routes/blueprints you may have–just enough for the requirement):
