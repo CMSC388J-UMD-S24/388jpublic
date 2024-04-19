@@ -1,0 +1,73 @@
+{% extends "base.html" %}
+{% block content %}
+
+<button id="buttonRand" class="bg-green-500 hover:bg-green-400 duration-300 hover:shadow-[0.25rem_0.25rem_0rem_0rem_#bbf7d0] hover:translate-x-[calc(-50%-0.25rem)] hover:translate-y-[calc(-50%-0.25rem)] active:-translate-x-[calc(50%-0.25rem)] active:-translate-y-[calc(50%-0.25rem)] whitespace-nowrap gap-4 p-4 flex rounded-xl -translate-x-1/2 -translate-y-1/2 active:shadow-none active:duration-75 text-white font-bold fixed top-1/2 left-1/2" onclick="getRand()">Get Random<span id="numebr"></span>
+  <div id="loadingOverlay" class="w-4 h-full grid place-items-center duration-500 opacity-0 scale-50">
+    <svg class="animate-spin -ml-1 mr-3 h-5 w-5 text-white" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+      <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
+      <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
+    </svg>
+  </div>
+</button>
+
+<script>
+  let hideLoadingScreen = () => {
+    document.querySelector('#loadingOverlay').classList.add('opacity-0');
+    document.querySelector('#loadingOverlay').classList.add('scale-50');
+    document.querySelector('#loadingOverlay').classList.add('hidden');
+  }
+
+  let showLoadingScreen = () => {
+    document.querySelector('#loadingOverlay').classList.remove('opacity-0');
+    document.querySelector('#loadingOverlay').classList.remove('scale-50');
+    document.querySelector('#loadingOverlay').classList.remove('hidden');
+  }
+  let rand = -1;
+  function getRand() {
+    let buttonRand = document.querySelector("#buttonRand");
+    document.querySelector("#numebr").classList.toggle("hidden");
+    buttonRand.disabled = true;
+    buttonRand.classList.add("pointer-events-none");
+    buttonRand.classList.add("cursor-not-allowed");
+    buttonRand.classList.add("opacity-50");
+    buttonRand.classList.add("grayscale-100");
+    showLoadingScreen();
+    fetch("/rand")
+    .then(d => d.text())
+    .then(d => {
+      rand = d;
+      hideLoadingScreen();
+      document.querySelector("#numebr").innerText = `${rand}`;
+      document.querySelector("#numebr").classList.toggle("hidden");
+      buttonRand.disabled = false;
+      buttonRand.classList.remove("pointer-events-none");
+      buttonRand.classList.remove("cursor-not-allowed");
+      buttonRand.classList.remove("opacity-50");
+      buttonRand.classList.remove("grayscale-100");
+      }
+    );
+  }
+</script>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
